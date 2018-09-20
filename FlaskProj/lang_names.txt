@@ -1,6 +1,0 @@
-English	en_US
-
-asd	asd
-Italian2	en_US3
-asddw	en_US
-English111	en_US1

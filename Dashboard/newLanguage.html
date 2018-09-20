@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+    <title>Spell Checker</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"
+        media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <div class="navbar-fixed">
+
+        <!-- Dropdown Structure -->
+
+        <div class="nav-wrapper">
+            <nav class="black darken-4" role="navigation">
+                <a href="#!" class="brand-logo left" style="height:100px;"><img src="img/logo.png" alt="Mountain View"
+                        style="width:100px;height:100px;"></a>
+                <ul class="center-align">
+                    <h4>Spell Checker</h4>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </div>
+</header>
+<br>
+<aside>
+
+    <ul id="slide-out" class="side-nav black fixed">
+        <div class="white-text">
+            <li><a href="newLanguage.html" class="white-text truncate">New Language</a></li>
+            <li><a href="existing.html" class="white-text truncate">Existing Language</a></li>
+
+            <li><a href="academic.html" class="white-text">Tutorials</a></li>
+            <li><a href="tutors.html" class="white-text">About</a></li>
+
+        </div>
+    </ul>
+</aside>
+
+<style>
+    div.ex1 {
+                margin-left: 200px;
+                
+         } 
+         div.ex2 {
+                margin-left: 20px;
+                
+         } 
+            
+            </style>
+
+<body>
+    <div class="container">
+
+        <h4>New Language</h4>
+        <div class="row">
+            <div class="input-field col s2">
+                <input value="" id="lang_name" type="text" class="left-align">
+                <label class="" for="lang_name">Language Name</label>
+            </div>
+
+            <div class="input-field col s2">
+                <input value="" id="lang_symbol" type="text" class="left-align">
+                <label class="" for="lang_symbol">Language Symbol</label>
+            </div>
+
+            <div class="input-field col s12">
+                <textarea id="dic" class="materialize-textarea"></textarea>
+                <label for="dic">Input dictionary file data</label>
+                <!-- <a class="waves-effect waves-light btn" id="drawgraph">Generate Files</a> -->
+            </div>
+
+            <div class="input-field col s12">
+                <textarea id="aff" class="materialize-textarea"></textarea>
+                <label for="aff">Input affix file data</label>
+                <a class="waves-effect waves-light btn" id="drawgraph">Generate Files</a>
+            </div>
+
+        </div>
+
+
+        <!-- Modal Trigger -->
+        <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4 id="header">Poka</h4>
+                <p id="err_id">A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" id="okbtn" class="modal-close waves-effect waves-green btn-flat">OK</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+<!-- Plotly -->
+<script src="plotly-latest.min.js"></script>
+<script type="text/javascript" src="controllers/academic.js"></script>
+</html>

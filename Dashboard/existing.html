@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+    <title>Spell Checker</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"
+        media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css"
+        media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/stylesheet.css" />
+
+    <div class="navbar-fixed">
+
+        <!-- Dropdown Structure -->
+
+        <div class="nav-wrapper">
+            <nav class="black darken-4" role="navigation">
+                <a href="#!" class="brand-logo left" style="height:100px;"><img src="img/logo.png" alt="Mountain View"
+                        style="width:100px;height:100px;"></a>
+                <ul class="center-align">
+                    <h4>Spell Checker</h4>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</header>
+<br>
+<style>
+    div.ex1 {
+                    margin-left: 230px;
+                    
+             } 
+             div.ex2 {
+                    margin-left: 4px;
+                    
+             } 
+                
+</style>
+
+<body>
+    <aside>
+
+        <ul id="slide-out" class="side-nav grey darken-4 fixed">
+            <div class="white-text">
+                <li><a href="newLanguage.html" class="white-text truncate">New Language</a></li>
+                <li><a href="existing.html" class="white-text truncate">Existing Language</a></li>
+
+                <li><a href="#" class="white-text">Tutorials</a></li>
+                <li><a href="#" class="white-text">About</a></li>
+
+            </div>
+        </ul>
+    </aside>
+    <div class="container">
+        <!-- <label>Language</label>
+        <select id="test1" class="browser-default">
+            <option value="" disabled selected>Select Language</option>
+            <option value="English">English</option>
+            <option value="Italian">Italian</option>
+            <option value="Urdu">Urdu</option>
+        </select> -->
+        <div class="input-field col s1" style="width:250px;">
+            <select id="select1" class="browser-default">
+                <option value="" disabled selected>Select Language</option>
+                <!-- <option value="English">English</option> -->
+                <!-- <option value="Italian">Italian</option> -->
+                <!-- <option value="Urdu">Urdu</option> -->
+            </select>
+            <!-- <label for="select1">Language</label> -->
+        </div>
+
+        <a class="waves-effect waves-light btn" id="drawgraph"><i class="material-icons left">mode_edit</i> Get data</a>
+        <br><br>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div id="divReadOnlyFields" class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea" style="height: 45px;"></textarea>
+                        <label for="textarea1">Dictionary File</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <br>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div id="divReadOnlyFields" class="input-field col s12">
+                        <textarea id="textarea2" class="materialize-textarea"></textarea>
+                        <label for="textarea2">Affix File</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    </div>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+<!-- Plotly -->
+<script src="plotly-latest.min.js"></script>
+<!-- <script type="text/javascript" src="controllers/main.js"></script> -->
+
+<script type="text/javascript" src="controllers/kickout.js"></script>
+<script>
+
+    $('select').material_select();
+
+</script>
+
+</html>

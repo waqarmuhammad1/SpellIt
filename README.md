@@ -44,7 +44,7 @@ After docker is installed run following command.
 
 This will download and run docker image in data persistance mode.
 
-After the command completes, you can access couchdb from [WebConsole](localhost:8091).
+After the command completes, you can access couchdb from `localhost:8091`
 
 The initial username is `Administrator` and password is `password`
 
@@ -55,6 +55,9 @@ Anyway there should be two buckets already available there
 2. data (412mb)
 
 if they are not create them, `auth` is the bucket in which we are storing usernames and passwords and `data` is the one in which we are storing actual data.
+
+
+
 
 After doing that we will need [couchbase python dependency](https://docs.couchbase.com/python-sdk/2.4/start-using-sdk.html). Install it using these commands.
 
@@ -67,6 +70,20 @@ After doing that we will need [couchbase python dependency](https://docs.couchba
 -- `sudo apt-get install libcouchbase-dev build-essential python-dev python-pip`
 
 -- `sudo pip install couchbase`
+
+Link to the [documentation](http://docs.couchbase.com/sdk-api/couchbase-python-client-2.1.1/) of couchbase client
+
+## NOTE: If you are creating the `Buckets` yourself, then run the following code to add username and password to the database for the first time.
+
+-- `from couchbase.cluster import Cluster, PasswordAuthenticator`
+
+-- `cluster = Cluster('couchbase://localhost')`
+
+-- `cluster.authenticate(PasswordAuthenticator('Administrator', 'password'))`
+
+-- `bucket = cluster.open_bucket('auth')`
+
+-- `bucket.upsert('admin', 'admin')`
 
 
 # How to setup python environment
@@ -107,4 +124,3 @@ You should see something like this.
  * Debugger is active!
  * Debugger PIN: 176-475-588
 `
-

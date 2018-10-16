@@ -66,6 +66,11 @@ class User():
         word_data = self.mapper(word_name, word_forms, paradigm_skeleton)
         return word_data
 
+    def get_user_paradigm_slots(self, paradigm_name):
+        self.paradigm_name = paradigm_name
+        self.paradigm_data = self.lang_data[paradigm_name]
+        return self.paradigm_data[self.skeleton]
+
     def mapper(self, root, forms, skeleton):
         resp = {}
         for x in range(1, len(skeleton)):
@@ -122,7 +127,7 @@ class User():
 # print(user.get_user_languages())
 # print(user.get_user_paradigms('English'))
 # print(user.set_user_paradigm('Verb', ['root', 'adjective', 'past', 'present']))
-
+# print(user.get_user_paradigm_slots('Verb'))
 # print(user.get_user_paradigm_words('Verb'))
 # print(user.set_user_paradigm_words('jump', ['jumping','jumps', 'jumper']))
 # print(user.get_user_paradigm_words_data('jump'))

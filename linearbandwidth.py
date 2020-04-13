@@ -92,7 +92,9 @@ def random_ping_function(lengths):
 
     node_pool = range(lengths)
     random.shuffle(node_pool)
+    data_point = 0
     while node_pool:
+	
         pings=[]
         poppy = [node_pool.pop(),node_pool.pop()]
         poppy.sort()
@@ -119,9 +121,12 @@ def random_ping_function(lengths):
             ++new_i
         pp = pprint.PrettyPrinter(depth=6)
         low_rez_df = pd.DataFrame(low_res_list, columns=("origin","destination"))
-        #pp.pprint(low_res_list)
-        low_rez_df.plot(kind='hexbin',x='origin',y='destination',gridsize=50,cmap='inferno')
-        plt.show()
+        low_rez_df.to_csv('data/test'+str(data_point)+'.csv')
+	#pp.pprint(low_res_list)
+        #low_rez_df.plot(kind='hexbin',x='origin',y='destination',gridsize=50,cmap='inferno')
+	#plt.savefig('data/plot'+str(data_point))
+	data_point +=1        
+
     net.stop()
 
 def linearBandwidthTest( lengths ):
@@ -180,6 +185,6 @@ def linearBandwidthTest( lengths ):
             info( serverbw, '\n' )
         info( '\n')
     info( '\n' )
-setLogLevel('error')
-topos = { 'mytopo': ( lambda: LinearTestTopo(5) ) }
-random_ping_function(10)
+setLogLevel('info')
+topos = { 'mytopo': ( lambda: LinearTestTopo(50) ) }
+random_ping_function(50)
